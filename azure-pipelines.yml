@@ -33,13 +33,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
     
-- task: NuGetCommand@2
-  inputs:
-    command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
-    nuGetFeedType: 'internal'
-    publishVstsFeed: '8693adf8-1872-432f-b24d-312ab68ee87a/ff4013e0-c5f0-4471-b7dd-4d58fb15b866'
-    
 
 - task: WhiteSource@21
   inputs:
